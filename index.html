@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <title>Laptop vs Desktop Questionnaire</title>
+</head>
+<body>
+
+  <main class="container">
+    <div class="title">
+      <h1>Questionnaire</h1>
+      <div class="underline"></div>
+    </div>
+
+    <!-- 1. Greeting Section -->
+    <article id="greeting-screen" class="greeting-container system-interface">
+      <h2>Welcome!</h2>
+      <p>
+        Thank you for participating in this questionnaire.
+        There is a total of 10 questions.
+        Please note you are required to complete each question before moving to the next.
+      </p>
+      <button id="start-btn" class="btn">Start</button>
+    </article>
+
+    <!-- 2. Personal Info Section -->
+    <div id="personal-screen" class="personal-info hidden">
+      <form id="personal-form" class="personal-form system-interface">
+        <h2>Personal Information</h2>
+        
+        <div class="input-box">
+          <input id="userName" name="Name" type="text" required autocomplete="off">
+          <label for="userName">Name</label>
+        </div>
+        
+        <div class="input-box">
+          <input id="userPosition" name="Position" type="text" autocomplete="off">
+          <label for="userPosition">Position (*Optional)</label>
+        </div>
+
+        <button type="submit" class="btn">Continue</button>
+      </form>
+    </div>
+
+    <!-- 3. Dynamic Questions Section -->
+    <div id="question-screen" class="main-questions hidden">
+      <article class="question system-interface">
+        <h2 id="q-number" class="q-number">Question 1</h2>
+        <p id="q-text" class="q">Question text goes here...</p>
+        
+        <div id="q-input-container" class="q-input-container">
+          <!-- JS will dynamically render text input or radio buttons here -->
+        </div>
+
+        <ul class="q-btn">
+          <li><button id="back-btn" class="btn back">Back</button></li>
+          <li><button id="next-btn" class="btn next">Next</button></li>
+        </ul>
+      </article>
+    </div>
+
+    <!-- 4. Completion Section -->
+    <div id="finished-screen" class="finished system-interface hidden">
+  <h2>All Done!</h2>
+  <p class="f">Thank you for participating.</p>
+  <div class="finish-actions">
+    <button id="show-btn" class="btn show">Show Summary</button>
+    
+    <!-- Make sure id="send-btn" or id="print-btn" matches your JS! -->
+    <button id="send-btn" class="btn send">Print / Save as PDF</button>
+  </div>
+  <div id="summary-display" class="summary-display hidden"></div>
+</div>
+      
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
