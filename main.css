@@ -206,7 +206,8 @@ body {
 }
 @media print {
   body {
-    align-items: Flex-start
+    align-items: Flex-start;
+    padding: 3px;
   }
   
   .page-break {
