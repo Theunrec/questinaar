@@ -204,10 +204,16 @@ body {
   white-space: pre-wrap;
   border: 1px solid #3a4659;
 }
-@media print { 
-  body{
-    margin: 0;
-    padding: 0;
+@media print {
+  /* Prevent specific sections from breaking across pages */
+  .questionnaire-card, .section-block, table, tr {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  
+  .page-break {
+    break-before: page;
+    page-break-before: always;
   }
 }
-    
+
