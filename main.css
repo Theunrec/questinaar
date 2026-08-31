@@ -205,10 +205,8 @@ body {
   border: 1px solid #3a4659;
 }
 @media print {
-  /* Prevent specific sections from breaking across pages */
-  .questionnaire-card, .section-block, table, tr {
-    break-inside: avoid;
-    page-break-inside: avoid;
+  body {
+    align-item: Flex-start
   }
   
   .page-break {
